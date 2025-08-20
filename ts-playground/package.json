@@ -4,13 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typecheck": "tsc --noEmit safe-integer.ts"
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=24576 tsc --noEmit safe-integer.ts",
+    "typecheck:go": "NODE_OPTIONS=--max-old-space-size=24576 tsgo --noEmit safe-integer.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@typescript/native-preview": "^7.0.0-dev.20250816.1",
     "typescript": "^5.9.2"
   }
 }
